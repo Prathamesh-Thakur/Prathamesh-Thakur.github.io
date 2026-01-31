@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Data Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="name">Prathamesh Thakur</h1>
+            <div class="typewriter-container">
+                <span class="dynamic-text"></span><span class="cursor">|</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-card glass-card hidden">
+            <div class="about-image">
+                <!-- Placeholder Image - Replace with your own -->
+                <img src="image.png" alt="Profile Picture">
+            </div>
+            <div class="about-text">
+                <h3>Who I Am</h3>
+                <p>
+                    I am a passionate technologist dedicated to solving complex problems using data. 
+                    With a strong foundation in mathematics and computer science, I build predictive models 
+                    and scalable AI solutions. I bridge the gap between raw data and actionable business insights.
+                    My goal is to leverage Artificial Intelligence to automate processes and discover hidden trends.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            
+            <!-- Category 1: Languages -->
+            <div class="skill-category-card glass-card hidden">
+                <h3><i class="fas fa-code"></i> Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">R</span>
+                </div>
+            </div>
+
+            <!-- Category 2: Machine Learning -->
+            <div class="skill-category-card glass-card hidden">
+                <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Gen AI & LLMS</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Llamaindex</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-Learn</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">Text-to-SQL</span>
+                    <span class="skill-tag">Transformers</span>
+                    <span class="skill-tag">LLM Architecture</span>
+                </div>
+            </div>
+
+            <!-- Category 3: Tools & Cloud -->
+            <div class="skill-category-card glass-card hidden">
+                <h3><i class="fas fa-cloud"></i> Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">Jupyter</span>
+                    <span class="skill-tag">Groq API</span>
+                </div>
+            </div>
+
+            <!-- Category 4: Data Visualization -->
+            <div class="skill-category-card glass-card hidden">
+                <h3><i class="fas fa-chart-line"></i> Visualization & Web</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Seaborn</span>
+                    <span class="skill-tag">Streamlit</span>
+                </div>
+            </div>
+
+            <!-- Category 5: Databases-->
+            <div class="skill-category-card glass-card hidden">
+                <h3><i class="fa-solid fa-database"></i> Databases</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MariaDB</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">SQLite</span>
+                </div>
+            </div>
+
+            <!-- Category 6: Cloud Technologies-->
+            <div class="skill-category-card glass-card hidden">
+                <h3><i class="fa-solid fa-database"></i> Cloud Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS EC2</span>
+                    <span class="skill-tag">AWS IAM</span>
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">Microsoft Azure AI Foundry</span>
+                    <span class="skill-tag">Microsoft Azure Vector Search</span>
+                    <span class="skill-tag">Microsoft Azure Blob Storage</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section (Separated) -->
+    <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="timeline-container hidden">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date"> June 2025 - July 2025</div>
+                <div class="timeline-content glass-card">
+                    <h4>Data & AI Intern</h4>
+                    <span class="company">Sogeti, Part of Capgemini</span>
+                    <ul style="list-style-type: disc;">
+                        <li>Developed a sales-focused AI agent using MCP servers and GitHub Copilot, leveraging the reasoning power of GPT-4 and Claude 3.7 for executive-level automation.</li>
+                        <li>Engineered a dynamic pipeline using Azure AI Search, Web Scraping, and MongoDB to power high-precision RAG agents with automated reporting and secure content filtering.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date"> August 2023 - March 2024</div>
+                <div class="timeline-content glass-card">
+                    <h4>ML Research Assistant</h4>
+                    <span class="company">Tata Institute of Fundamental Research</span>
+                    <ul style="list-style-type: disc;">
+                        <li>Led a team to develop a machine monitoring app using ESP32-CAM and YOLO, automating real-time digit recognition from hardware panels.</li>
+                        <li>Scaled the system to handle 4 concurrent streams with anomaly detection and automated SMTP/Alarm alerts for proactive industrial maintenance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date"> June 2022 - July 2022</div>
+                <div class="timeline-content glass-card">
+                    <h4>Cloud Intern</h4>
+                    <span class="company">Capgemini</span>
+                    <ul style="list-style-type: disc;">
+                        <li>Architected and hosted a scalable web solution using Azure App Service and SQL, linked directly to a GitHub development pipeline for automated updates.</li>
+                        <li>Prototyped features for an open-source code management platform, optimizing how developers connect to and manage open-source projects.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section (Separated) -->
+    <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="timeline-container hidden">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">August 2024 - May 2026</div>
+                <div class="timeline-content glass-card">
+                    <h4>M.S. Computer Science</h4>
+                    <span class="company">North Carolina State University</span>
+                    <p> GPA: 3.85/4.0 </p>
+                    <p>Courses: Artificial Intelligence, Automated Learning and Data Analysis, Software Engineering, Neural Networks, Foundations of Data Science, Design and Analysis of Algorithms, Database Management System, Social Computing and Decentralized AI, Hardware Software co-design for intelligent systems.</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">January 2021 - May 2024</div>
+                <div class="timeline-content glass-card">
+                    <h4>B.E. Computer Engineering</h4>
+                    <span class="company">Mumbai University</span>
+                    <p> GPA: 9.72/10.0 </p>
+                    <p>Courses: Machine Learning, Quantitative Analysis, Data Warehousing and Mining, Information Retrieval, Big Data Analytics. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-card hidden">
+                <div class="project-info">
+                    <h3>Natural-Langauge-to-SQL</h3>
+                    <p class="tech-stack">Python • Llamaindex • Groq • Streamlit</p>
+                    <p>Uses two approaches to convert natural language to SQL queries, and execute them on the database to reutrn outputs and visuals.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Prathamesh-Thakur/Natural-langauage-to-SQL" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <!-- <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-card hidden">
+                <div class="project-info">
+                    <h3>Stock Market Sentiment Analysis And Trading</h3>
+                    <p class="tech-stack">Python • Google Gen AI SDK</p>
+                    <p>Autonomous Python Agent using Gemini for sentiment analaysis based on news and reasoning and Alpaca for executing trades.</p>
+                    <div class="project-links">
+                        <a href="https://www.kaggle.com/code/pratcs/stock-trading-agent" target="_blank"><i class="fa-brands fa-kaggle"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-card hidden">
+                <div class="project-info">
+                    <h3>Transformer from scratch</h3>
+                    <p class="tech-stack">Python • PyTorch • NLTK</p>
+                    <p>Engineered a approximately 5M parameter sequence-to-sequence Transformer, implementing 8-head attention.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Prathamesh-Thakur/Transformer-from-scratch" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <!-- <a href="#" target="_blank"><i class="fab fa-youtube"></i> Demo Video</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4-->    
+            <div class="project-card glass-card hidden">
+                <div class="project-info">
+                    <h3>Neural Net from scratch</h3>
+                    <p class="tech-stack">Python • Numpy</p>
+                    <p>Implementation of a dense neural network without existing frameworks.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Prathamesh-Thakur/Neural-net-from-scratch" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <!-- <a href="#" target="_blank"><i class="fab fa-youtube"></i> Demo Video</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5-->    
+            <div class="project-card glass-card hidden">
+                <div class="project-info">
+                    <h3>BMW Sales Prediction</h3>
+                    <p class="tech-stack">Python • Pandas • Feature Engineering</p>
+                    <p>Prediction of the price of a BMW model based on various parameters.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Prathamesh-Thakur/BMW-Sales-Prediction" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://bmw-sales-prediction-opnkyntqtaa447kzrohqu9.streamlit.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6-->    
+            <div class="project-card glass-card hidden">
+                <div class="project-info">
+                    <h3>Youtube video summarizer</h3>
+                    <p class="tech-stack">Python • Streamlit • Google Gemini</p>
+                    <p>Summarizing youtube videos using Gemini AI API</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Prathamesh-Thakur/Youtube-video-summarizer" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://drive.google.com/file/d/1VO0u3HK9xgTG4j-J8WGBSlrMRPu9cAGm/view?usp=sharing" target="_blank"><i class="fab fa-youtube"></i> Demo Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container glass-card hidden">
+            <form action="mailto:prat24953@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/prathameshsthakur"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Prathamesh-Thakur"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2026 Prathamesh Shripad Thakur</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

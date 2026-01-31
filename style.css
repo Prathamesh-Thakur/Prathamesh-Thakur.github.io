@@ -1,0 +1,420 @@
+/* --- Variables & Reset --- */
+:root {
+    --bg-color: #0a192f;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-primary: #ccd6f6;
+    --text-secondary: #8892b0;
+    --accent: #64ffda; /* Neon Teal */
+    --accent-dim: rgba(100, 255, 218, 0.1);
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- Animated Background --- */
+.background-animation {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: float 20s infinite alternate;
+}
+
+.shape-1 {
+    width: 400px; height: 400px;
+    background: #1d4ed8;
+    top: -100px; left: -100px;
+}
+.shape-2 {
+    width: 300px; height: 300px;
+    background: #7e22ce;
+    bottom: 50px; right: -50px;
+    animation-delay: -5s;
+}
+.shape-3 {
+    width: 200px; height: 200px;
+    background: var(--accent);
+    top: 40%; left: 40%;
+    opacity: 0.2;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 50px); }
+}
+
+/* --- Utilities --- */
+.section {
+    padding: 100px 10%;
+    min-height: 80vh;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    bottom: -10px;
+    left: 0;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+/* Scroll Animation Class */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* --- Hero --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; /* Offset for navbar */
+}
+
+.name {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--text-primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.typewriter-container {
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+/* --- About --- */
+.about-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid var(--accent);
+    box-shadow: 10px 10px 0 var(--accent-dim);
+}
+
+.about-text h3 { margin-bottom: 20px; color: var(--text-primary); font-size: 1.5rem; }
+.about-text p { color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; }
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: grid;
+    /* Changed to 3 columns per row as requested */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-category-card h3 {
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: var(--accent-dim);
+    color: var(--accent);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    background: var(--accent);
+    color: var(--bg-color);
+}
+/* --- Timeline (Exp & Edu) --- */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1000px;
+}
+
+/* Central Line */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--text-secondary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px; /* Center perfectly */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 50%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-left: none; /* Reset previous left border style */
+}
+
+/* Odd items: Left side */
+.timeline-item:nth-child(odd) {
+    align-self: flex-start;
+    text-align: right;
+    padding-left: 0;
+}
+
+/* Even items: Right side */
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+    text-align: left;
+    padding-right: 0;
+}
+
+/* Timeline Dots */
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+    /* Add a border/shadow to separate dot from the line visually */
+    box-shadow: 0 0 0 4px var(--bg-color);
+}
+
+/* Position dots for Odd items (Right edge) */
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -8px; /* Half width (8) */
+    left: auto;
+}
+
+/* Position dots for Even items (Left edge) */
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px; /* Half width (8) */
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.timeline-content h4 { color: var(--text-primary); font-size: 1.1rem; }
+.company { display: block; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px; font-style: italic; }
+
+.timeline-content p { 
+    font-size: 0.9rem; 
+    color: var(--text-secondary);
+    text-align: justify; /* Justify paragraphs */
+}
+
+/* Fix for Bullet Points in Timeline */
+.timeline-content ul {
+    list-style: disc outside; /* Force bullets to show */
+    margin-top: 10px;
+    padding-left: 20px; /* Add padding for indentation */
+    color: var(--text-secondary);
+    text-align: justify; /* Justify list items */
+}
+
+/* Ensure the bullets look good in right-aligned cards */
+.timeline-item:nth-child(odd) .timeline-content ul {
+    text-align: justify; /* Justify text even in right-aligned containers */
+    list-style-position: outside; /* Keep bullets on the left */
+}
+
+.timeline-content li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- Projects --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-info h3 { margin-bottom: 10px; color: var(--text-primary); }
+.tech-stack { color: var(--accent); font-size: 0.8rem; margin-bottom: 15px; font-family: monospace; }
+.project-info p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; }
+.project-links a { margin-right: 15px; color: var(--text-primary); }
+.project-links a:hover { color: var(--accent); }
+
+/* --- Contact --- */
+.contact-container { max-width: 600px; margin: 0 auto; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--accent); }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-family: inherit;
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+
+.btn-submit {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-submit:hover { background: var(--accent-dim); }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: rgba(10, 25, 47, 0.9);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+.social-links { margin-bottom: 15px; }
+.social-links a { font-size: 1.5rem; margin: 0 15px; color: var(--text-secondary); transition: 0.3s; }
+.social-links a:hover { color: var(--accent); transform: translateY(-3px); display: inline-block; }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .navbar { justify-content: center; padding: 15px; }
+    .nav-links { gap: 15px; font-size: 0.8rem; }
+    .name { font-size: 3rem; }
+    .about-card { flex-direction: column; text-align: center; }
+    .section { padding: 80px 5%; }
+    .skills-grid { grid-template-columns: 1fr; }
+
+    /* Timeline Mobile Reset */
+    .timeline-container::after {
+        left: 31px; /* Move line to left */
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 23px; /* Align dot on left line */
+        right: auto;
+    }
+}
