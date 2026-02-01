@@ -392,7 +392,7 @@ footer {
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .navbar { justify-content: center; padding: 15px; }
-    .nav-links { gap: 15px; font-size: 0.8rem; }
+    .nav-links { gap: 15px; font-size: 0.8rem; flex-wrap: wrap;}
     .name { font-size: 3rem; }
     .about-card { flex-direction: column; text-align: center; }
     .section { padding: 80px 5%; }
@@ -402,19 +402,31 @@ footer {
     .timeline-container::after {
         left: 31px; /* Move line to left */
     }
+    
+    /* Specific Overrides for Mobile Timeline to fix overlapping */
     .timeline-item {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
     }
+    
+    /* Target both odd and even to override desktop specificity */
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         left: 0;
         text-align: left;
+        padding-left: 70px; /* Force padding left so text doesn't hit dot */
+        padding-right: 25px;
+        align-self: flex-start; /* Reset align-self */
     }
+    
     .timeline-item:nth-child(odd) .timeline-dot,
     .timeline-item:nth-child(even) .timeline-dot {
         left: 23px; /* Align dot on left line */
         right: auto;
+    }
+    
+    /* Align bullets left on mobile */
+    .timeline-item:nth-child(odd) .timeline-content ul {
+        text-align: left;
+        list-style-position: outside;
     }
 }
