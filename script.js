@@ -1,4 +1,5 @@
-// Typewriter Effect
+// Typewriter Effect (Commented Out)
+/*
 const dynamicText = document.querySelector(".dynamic-text");
 const words = ["AI Engineer", "Machine Learning Engineer", "Data Scientist", "Data Analyst"];
 
@@ -36,6 +37,7 @@ const typeEffect = () => {
 
 // Start Typewriter
 typeEffect();
+*/
 
 
 // Scroll Animation (Intersection Observer)

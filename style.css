@@ -158,6 +158,29 @@ ul { list-style: none; }
     -webkit-text-fill-color: transparent;
 }
 
+.hero p {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero p::before {
+    content: '✨';
+    opacity: 0.7;
+}
+
+.hero p::after {
+    content: '✨';
+    opacity: 0.7;
+}
+
 .typewriter-container {
     font-size: 1.5rem;
     color: var(--accent);
